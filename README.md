@@ -24,16 +24,16 @@ var gammaDeltaRatio = require( 'math-gamma-delta-ratio' );
 Evaluates the ratio `Γ(x) / Γ(x + δ)`, where `Γ` is the [gamma function][gamma-function].
 
 ``` javascript
-var val = gamma( 4, 0.5 );
+var val = gammaDeltaRatio( 4, 0.5 );
 // returns ~0.516
 
-val = gamma( -3/2, 3 );
+val = gammaDeltaRatio( -3/2, 3 );
 // returns ~2.667
 
-val = gamma( -1/2, 1 );
+val = gammaDeltaRatio( -1/2, 1 );
 // returns -2
 
-val = gamma( 1/2, 1/2 );
+val = gammaDeltaRatio( 1/2, 1/2 );
 // returns ~1.772
 ```
 
@@ -50,7 +50,7 @@ var i;
 
 for ( i = 0; i < x.length; i++ ) {
 	v = gammaDeltaRatio( x[ i ], 2 );
-	console.log( 'x: %d, delta: %d, f(x): %d', x[ i ], 2, v );
+	console.log( 'x: %d, delta: %d, f(x,x+delta): %d', x[ i ], 2, v );
 }
 ```
 

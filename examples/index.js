@@ -9,5 +9,5 @@ var i;
 
 for ( i = 0; i < x.length; i++ ) {
 	v = gammaDeltaRatio( x[ i ], 2 );
-	console.log( 'x: %d, delta: %d, f(x): %d', x[ i ], 2, v );
+	console.log( 'x: %d, delta: %d, f(x,x+delta): %d', x[ i ], 2, v );
 }
